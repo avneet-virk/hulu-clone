@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Result.css";
 import VideoCard from "./Videos";
 import axios from "../axios";
-import FlipMove from "react-flip-move";
 import { Link } from "react-router-dom";
 
 function Results({ title, selectedOption }) {
@@ -56,11 +55,11 @@ function Results({ title, selectedOption }) {
           </div>
 
           <h2>{title} Movies</h2>
-          <FlipMove>
+          <div>
             {movies.map((movie) => (
               <VideoCard key={movie.id} movie={movie} />
             ))}
-          </FlipMove>
+          </div>
         </>
       )}
     </div>
