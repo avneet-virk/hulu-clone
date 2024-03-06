@@ -34,7 +34,7 @@ h1 {
     background-size: .05em .05em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shad-anim 30s linear infinite;
+    animation: shad-anim 20s linear infinite;
     }
 
 @keyframes shad-anim {

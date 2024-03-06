@@ -12,3 +12,9 @@ h1,h2{
     color: aliceblue;
     padding-left: 30px;
 }
+.results .topbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding:40px;
+}
