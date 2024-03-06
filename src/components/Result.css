@@ -1,0 +1,14 @@
+
+h1,h2{
+    color:#fff;
+    text-align: center;
+}
+.results > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.results a{
+    color: aliceblue;
+    padding-left: 30px;
+}
