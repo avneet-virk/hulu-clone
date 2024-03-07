@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Result from "./pages/result"
@@ -6,16 +6,13 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  const [selectedOption,setSelectedOption] =useState('');
-  const [title,setTitle] =useState('');
-  console.log(title,selectedOption)
   return (
     <BrowserRouter>
       <div className="app">
         <Header />
         <Routes>
-          <Route path="/" element={<Nav setTitle={setTitle} setSelectedOption={setSelectedOption}/>} />
-          <Route path="/:title" element={<Result title={title} selectedOption={selectedOption}/>} />
+          <Route path="/" element={<Nav/>} />
+          <Route path="/:title" element={<Result/>} />
         </Routes>
       </div>
     </BrowserRouter>

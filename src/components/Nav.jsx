@@ -3,73 +3,72 @@ import requests from '../requests'
 import "./Nav.css"
 import { Link } from 'react-router-dom'
 
-const Nav = ({setTitle,setSelectedOption}) => {
-
+const Nav = () => {
     return (
         <div className='nav'>
             <Link to="/trending" onClick={() => {
-                setTitle('Trending')
-                setSelectedOption(requests.fetchTrending)
+                localStorage.setItem('title','Trending')
+                localStorage.setItem('requestType',requests.fetchTrending)
             }}>
                  Trending
             </Link>
             <Link to="/top-rated" onClick={() => {
-                setTitle('Top Rated')
-                setSelectedOption(requests.fetchTopRated)
+                localStorage.setItem('title','Top Rated')
+                localStorage.setItem('requestType',requests.fetchTopRated)
             }}>
                  Top Rated
             </Link>
             <Link to="/action" onClick={() => {
-                setTitle('Action')
-                setSelectedOption(requests.fetchActionMOvies)
+                localStorage.setItem('title','Action')
+                localStorage.setItem('requestType',requests.fetchActionMOvies)
             }}>
                 Action
             </Link>
             <Link to="/comedy" onClick={() => {
-                setTitle('Comedy')
-                setSelectedOption(requests.fetchComedyMovies)
+                localStorage.setItem('title','Comedy')
+                localStorage.setItem('requestType',requests.fetchComedyMovies)
             }}>
                 Comedy
             </Link>
             <Link to="/horror" onClick={() => {
-                setTitle('Horror')
-                setSelectedOption(requests.fetchHorrorMovies)
+                localStorage.setItem('title','Horror')
+                localStorage.setItem('requestType',requests.fetchHorrorMovies)
             }}>
                 Horror
             </Link>
             <Link to="/romance" onClick={() => {
-                setTitle('Romance')
-                setSelectedOption(requests.fetchRomanceMovies)
+                localStorage.setItem('title','Romance')
+                localStorage.setItem('requestType',requests.fetchRomanceMovies)
             }}>
                 Romance
             </Link>
             <Link to="/mystery" onClick={() => {
-                setTitle('Mystery')
-                setSelectedOption(requests.fetchMystery)
+                localStorage.setItem('title','Mystery')
+                localStorage.setItem('requestType',requests.fetchMystery)
             }}>
                 Mystery
             </Link>
             <Link to="/sci-fi" onClick={() => {
-                setTitle('Sci-fi')
-                setSelectedOption(requests.fetchSciFiMovies)
+                localStorage.setItem('title','Sci-fi')
+                localStorage.setItem('requestType',requests.fetchSciFiMovies)
             }}>
                 Sci-fi
             </Link>
             <Link to="/western" onClick={() => {
-                setTitle('Western')
-                setSelectedOption(requests.fetchWesternMovies)
+                localStorage.setItem('title','Western')
+                localStorage.setItem('requestType',requests.fetchWesternMovies)
             }}>
                 Western
             </Link>
             <Link to="/animation" onClick={() => {
-                setTitle('Animation')
-                setSelectedOption(requests.fetchAnimationMovies)
+                localStorage.setItem('title','Animation')
+                localStorage.setItem('requestType',requests.fetchAnimationMovies)
             }}>
                 Animation
             </Link>
             <Link to="/tv-movie" onClick={() => {
-                setTitle('Tv Movie')
-                setSelectedOption(requests.fetchAnimationMovies)
+                localStorage.setItem('title','Tv Movie')
+                localStorage.setItem('requestType',requests.fetchTv)
             }}>
                 Tv Movie
             </Link>

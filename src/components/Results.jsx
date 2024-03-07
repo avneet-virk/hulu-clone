@@ -4,27 +4,29 @@ import VideoCard from "./Videos";
 import axios from "../axios";
 import { Link } from "react-router-dom";
 
-function Results({ title, selectedOption }) {
+function Results() {
   const [movies, setMovies] = useState([]);
   const [copyMovies, setCopyMovies] = useState([]);
   const [loading, setLoding] = useState(false);
   const [search, setSearch] = useState("");
+  const title = localStorage.getItem('title') || ''
 
   useEffect(() => {
     setLoding(true);
     async function fetchData() {
-      const request = await axios.get(selectedOption);
+      const selectApi = localStorage.getItem('requestType') || ''
+      const request = await axios.get(selectApi);
       setMovies(request.data.results);
       setCopyMovies(request.data.results);
       setLoding(false);
       return request;
     }
     fetchData();
-  }, [selectedOption]);
+  }, []);
 
   const handleSearch = (value) => {
     const moviesData = [...copyMovies];
-    if (value == "") {
+    if (value === "") {
       setMovies(copyMovies);
     } else {
       const searchData = moviesData.filter((data) =>
